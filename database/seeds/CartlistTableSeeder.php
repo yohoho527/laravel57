@@ -15,12 +15,12 @@ class CartlistTableSeeder extends Seeder
         //
         Cartlist::truncate();
 
-        $item1 = Cartlist::create([
-            'pNum' => 1,
-            'pNo' => '1114460-PRBL',
-            'pSize' => 'L',
-            'cart_id' => 1,
-        ]);
+        // $item1 = Cartlist::create([
+        //     'pNum' => 1,
+        //     'pNo' => '1114460-PRBL',
+        //     'pSize' => 'L',
+        //     'cart_id' => 1,
+        // ]);
 
 
 
