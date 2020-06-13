@@ -13,11 +13,11 @@ class Cartlist_ProductionTableSeeder extends Seeder
     {
         //
         Cartlist_production::truncate();
-        $production2 =Cartlist_Production::create([
-            'cartlist_id' => '1',
-            'production_id' => "1",
+        // $production2 =Cartlist_Production::create([
+        //     'cartlist_id' => '1',
+        //     'production_id' => "1",
 
-        ]);
+        // ]);
 
         // $production2 = Cartlist_Production::create([
         //     'cartlist_id' => '2',
