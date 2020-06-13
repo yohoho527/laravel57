@@ -2,8 +2,9 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Cart;
+use App\Order;
+
 use Illuminate\Notifications\Notifiable;
 
 class User extends \TCG\Voyager\Models\User
@@ -19,6 +20,8 @@ class User extends \TCG\Voyager\Models\User
         'name', 'email', 'password',
     ];
 
+    protected $guarded = [];
+// create($request->all());
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -36,4 +39,14 @@ class User extends \TCG\Voyager\Models\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function cart()
+    {
+        return $this->hasOne(Cart::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
